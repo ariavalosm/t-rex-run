@@ -3,10 +3,61 @@
   padding: 0px;
 }
 
+body{
+  height: 100vh;
+  margin: 1rem;
+}
+
+h2{
+  margin: 3rem;
+  position: relative;
+  font-family: Verdana;
+  font-size: 5rem;
+  font-weight: 300;
+  color: #af91fa;
+}
+
 .dino{
   position: absolute;
   width: 60px;
   height: 60px;
-  background-color: palevioletred;
+  background-image: url(t-rex.png);
   bottom: 80px;
+}
+
+.obstacle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url(cacti.png);
+  bottom: 0px;
+}
+
+#desert {
+  position: center;
+  bottom: 0px;
+  background-image: url('t-rex-background.png');
+  background-repeat: repeat-x;
+  animation: slideright 600s infinite linear;
+  -webkit-animation: slideright 600s infinite linear;
+  width: 100%;
+  height: 200px;
+}
+
+@keyframes slideright {
+  from {
+      background-position: 70000%;
+  }
+  to {
+      background-position: 0%;
+  }
+}
+
+@-webkit-keyframes slideright {
+  from {
+      background-position: 70000%;
+  }
+  to {
+      background-position: 0%;
+  }
 }
